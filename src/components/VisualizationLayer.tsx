@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import Rough from "roughjs"
+import Rough from "roughjs/bin/rough"
 
 import { chuckCloseCanvasTransform } from "./canvas/basicCanvasEffects"
 
