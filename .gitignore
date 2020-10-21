@@ -4,7 +4,6 @@
 .npmrc
 .nyc_output/
 /node_modules
-/lib
 
 .DS_Store
 npm-debug.log
@@ -20,5 +19,6 @@ examples/dist/bundle.js
 *.sublime-project
 *.sublime-workspace
 dist/semiotic.js
+
 
 screenshots
