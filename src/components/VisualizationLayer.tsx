@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import * as Rough from "roughjs-es5/lib/canvas"
+import Rough from "roughjs"
 
 import { chuckCloseCanvasTransform } from "./canvas/basicCanvasEffects"
 
@@ -10,7 +10,7 @@ import {
   VizLayerTypes
 } from "./types/generalTypes"
 
-const RoughCanvas = Rough.RoughCanvas
+const RoughCanvas = Rough.canvas
 
 type Props = {
   axes?: Array<React.ReactNode>
@@ -137,7 +137,7 @@ class VisualizationLayer extends React.PureComponent<Props, State> {
         (renderObject && renderObject.renderMode) || renderObject
 
       if (actualRenderMode) {
-        rc = rc || new RoughCanvas(this.props.canvasContext)
+        rc = rc || RoughCanvas(this.props.canvasContext.getContext())
         const rcExtension =
           (typeof renderObject === "object" && renderObject) || {}
         rcSettings = {
